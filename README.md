@@ -1,14 +1,4 @@
-# clubIslive api documentation
-
-This is a quick reference, for the full documentation go to [API for clubislive](https://apidocs.clubislive.nl/)
-
-## notes
-
-### debug
- * Request Timers
-   * start: `localStorage.setItem('api-log-times',1)` in the browser console to activate timers.
-   * stop: `localStorage.removeItem('api-log-times')` in the browser console to deactivate timers.
-
+# Twero api documentation
 
 ### Setup
 Install nodejs.
@@ -16,6 +6,11 @@ And run `npm install`.
 
 ### Parse
 run `gulp` Or `gulp dev` to parse the API to the `dist` folder.
+
+### debug
+ * Request Timers
+   * start: `localStorage.setItem('api-log-times',1)` in the browser console to activate timers.
+   * stop: `localStorage.removeItem('api-log-times')` in the browser console to deactivate timers.
 
 
 ### properties
