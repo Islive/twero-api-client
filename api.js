@@ -49,7 +49,7 @@
     this.io         = options.io;
     this.url        = options.url;
     this.apiKey     = apiKey;
-    this.apiVersion = '1';
+    this.apiVersion = '2';
     this.language   = options.language || 'en';
     this.noQueue    = options.noQueue === true;
 
@@ -72,11 +72,6 @@
       }
 
       this.eventHandlers = {};
-
-      // When a queue is used, keep in mind that requests made when the socket is disconnected will never fire a callback
-      if (!this.noQueue) {
-        // TODO
-      }
     }
 
     // We use a queue when noQueue is omitted from options
