@@ -39,34 +39,15 @@ If any error is encounterd, **error** will be set
 
 ## exposed functions
 
-* *global*
-  * **search** (string query, [*object options*], function callback)
-  * **languages** (string code, function callback)
-  * **location** (string search, function callback)
-
 * abuse
   * **report** (number suspectUserId, [*string section*], [*number identifier*], string reason, function callback)
 
 * activity
   * **daily** ([*object options*], function callback)
-  * **history** (string event, [*object options*], function callback)
-  * **load** ([*number userId*], [*object options*], function callback)
-  * **loadFollowed** ([*object options*], function callback)
-  * **loadUser** (number userId | string username, [*number page*], function callback)
-
-* agenda
-  * **fetchSchedule** (string username | string date, function callback)
-
-* chat
-  * **end** ([*string username*], function callback)
-  * **keepAlive** ([*number userId*], function callback)
-  * **kick** (string username, function callback)
-  * **latestEarnings** (function callback)
-  * **setCyberToy** (string type, string status, function callback)
-  * **setFreechat** (string status, function callback)
-  * **setVIP** (string status, number userId, function callback)
-  * **start** ([*string username*], function callback)
-
+  * **fetch** (function callback)
+  * **fetchOne** (number id, function callback) 
+  * **history** (string event, object options, callback)
+       
 * conversation
   * **archive** (number userId, function callback)
   * **fetch** (number userId, [*number page*], [*object params*], function callback)
@@ -74,24 +55,30 @@ If any error is encounterd, **error** will be set
   * **fetchUnread** (function callback)
   * **markAsRead** (number userId, function callback)
   * **send** (number userId, string message, [*binaryString attachment*], function callback)
+  
+* events
+  * **create** (object data, function callback)
+  * **find** (object options, function callback)
+  * **findOne** (number id, function callback)
+  * **remove** (number id, function callback)
+  * **update** (object data, function callback)
+  * **updateUserState** (object data, function callback)
 
 * follow
-  * **fetchAll** (function callback)
   * **fetchAllFollowed** ([*number userId*], [*number page*], [*object options*], function callback)
   * **fetchAllFollowers** ([*number userId*], [*number page*], [*object options*], function callback) **Note:** *if you want to omit **userId** but use **page**, supply **null** as **userId***
   * **follow** (number userId, function callback)
   * **isFollowing** (number userId, function callback)
   * **unfollow** (number userId, function callback)
 
+* global
+  * **search** (string query, [*object options*], function callback)
+  * **languages** (string code, function callback)
+  * **location** (string search, function callback)
+
 * media
   * **buy** (number mediaId, function callback)
-  * **checkAccess** (number mediaId, function callback)
-  * **create** (object mediaInfo, function callback)
-  * **fetchAlbum** (string username, number albumId, function callback)
   * **fetchAll** (string type, [*string gender*], [*number page*], function callback)
-  * **fetchBought** (function callback)
-  * **fetchByFollowers** (number userId, [*number limit*], function callback)
-  * **fetchByUsername** (string username, function callback)
   * **fetchOwn** (function callback)
   * **fetchOwnRating** (number mediaId, function callback)
   * **moderate** (function callback)
@@ -101,10 +88,9 @@ If any error is encounterd, **error** will be set
   * **search** ([*object filters*], function callback)
   * **update** (object mediaInfo, function callback)
   * **viewAlbum** (number albumId, function callback)
+  * **viewAttachment** (object data, function callback)
   * **viewAttachments** (string username, function callback)
-
-* news
-  * **fetch** (function callback)
+  * **viewSnapshot** (string username, function callback)
 
 * payment
   * **createSession** (object paymentData, function callback)
@@ -136,15 +122,15 @@ If any error is encounterd, **error** will be set
 * user
   * **autocomplete** (string query, function callback)
   * **birthdays** ([*object options*], function callback)
+  * **block** (number userId, function callback)
   * **checkEmail** (string email, function callback)
   * **checkUsername** (string username, function callback)
   * **fetchOwn** (function callback)
-  * **findByUsername** (string username, function callback)
+  * **find** ([*object searchOptions*], [*number page*], function callback)
   * **forgotPassword** ([*string username*], [*string email*], function callback)
   * **login** ([*string role*], string username, string password, function callback)
   * **loginByHash** (string hash, function callback)
   * **online** (function callback)
-  * **matches** (function callback)
   * **register** (object form, function callback)
   * **remove** (function callback)
   * **removeProfileCover** (function callback)
@@ -156,14 +142,4 @@ If any error is encounterd, **error** will be set
   * **update** (object form, function callback)
   * **uploadSnapshot** (string snapshot, [*string type*], [*object options*], function callback)
   * **verifyEmail** (string hash, function callback)
-
-* abuse
-  * **report** (number suspectUserId, [*string section*], [*number identifier*], string reason, function callback)
-
-* events
-  * **create** (object data, function callback)
-  * **find** (object options, function callback)
-  * **findOne** (number id, function callback)
-  * **update** (object data, function callback)
-  * **updateUserState** (object data, function callback)
-  * **remove** (number id, function callback)
+  
