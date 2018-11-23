@@ -101,13 +101,6 @@ If any error is encounterd, **error** will be set
   * **viewAlbum** (number albumId, function callback)
   * **viewAttachments** (string username, function callback)
 
-* message
-  * **compose** (string to, string title, string content, function callback)
-  * **fetchByUsername** (string username, object params, function callback)
-  * **inbox** ([*number page*], function callback)
-  * **markRead** (string hash, [*number messsageId*], function callback)
-  * **reply** (string to, string hash, string content, function callback)
-
 * news
   * **fetch** (function callback)
 
@@ -116,14 +109,6 @@ If any error is encounterd, **error** will be set
   * **getAssortiment** (string assortimentName, [*object extraParameters*], function callback)
   * **getRedeemInfo** (number bundleId, function callback)
   * **redeemCode** (number bundleId, string code, [*object options*], function callback)
-
-* performer
-  * **checkUsername** (string username, function callback)
-  * **login** (string username, string password, function callback)
-  * **register** (object form, function callback)
-  * **search** ([*object searchparams*], [*number page*], function callback)
-  * **searchByUsername** (string username, [*object options*], function callback)
-  * **update** (object form, function callback)
 
 * post
   * **all** ([*object options*], function callback)
