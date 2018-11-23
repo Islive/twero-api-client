@@ -41,6 +41,8 @@ If any error is encounterd, **error** will be set
 
 * *global*
   * **search** (string query, [*object options*], function callback)
+  * **languages** (string code, function callback)
+  * **location** (string search, function callback)
 
 * abuse
   * **report** (number suspectUserId, [*string section*], [*number identifier*], string reason, function callback)
